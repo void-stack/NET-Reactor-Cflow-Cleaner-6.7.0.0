@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNR 6.7 Cflow", "DNR 6.7 Cflow\DNR 6.7 Cflow.csproj", "{F606B3A7-E390-442C-9BF4-8882C6AD4B19}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F606B3A7-E390-442C-9BF4-8882C6AD4B19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F606B3A7-E390-442C-9BF4-8882C6AD4B19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F606B3A7-E390-442C-9BF4-8882C6AD4B19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F606B3A7-E390-442C-9BF4-8882C6AD4B19}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

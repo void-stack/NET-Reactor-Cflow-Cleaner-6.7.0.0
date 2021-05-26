@@ -19,7 +19,8 @@ namespace DNR.Core
 
             foreach (var TypeDef in ctx.Module.Types.ToArray())
                 foreach (var MethodDef in TypeDef.Methods.Where(x => x.HasBody && ContainsSwitch(x)).ToArray())
-                    try {
+                    try
+                    {
                         var blocks = new Blocks(MethodDef);
                         blocks.MethodBlocks.GetAllBlocks();
                         blocks.RemoveDeadBlocks();
@@ -30,10 +31,13 @@ namespace DNR.Core
                         CfDeob.Initialize(blocks);
                         CfDeob.Deobfuscate();
                         blocks.RepartitionBlocks();
-                        blocks.GetCode(out var instructions, out var exceptionHandlers);
+                        blocks.GetCode(out
+                        var instructions, out
+                        var exceptionHandlers);
                         DotNetUtils.RestoreBody(MethodDef, instructions, exceptionHandlers);
                     }
-                    catch {
+                    catch
+                    {
                         // ignored
                     }
         }
@@ -43,86 +47,70 @@ namespace DNR.Core
             var logger = ctx.Options.Logger;
 
             foreach (var type in ctx.Module.Types)
-            foreach (var method in type.Methods.Where(x =>
-                x.HasBody && x.Body.HasInstructions && x.Body.Instructions.Count >= 3)) {
-                var Instructions = method.Body.Instructions;
+                foreach (var method in type.Methods.Where(x => x.HasBody && x.Body.HasInstructions && x.Body.Instructions.Count >= 3))
+                {
+                    var Instructions = method.Body.Instructions;
 
-                for (var i = 1; i < Instructions.Count; i++) {
-                    if (i + 1 >= Instructions.Count) continue;
+                    for (var i = 1; i < Instructions.Count; i++)
+                    {
+                        if (i + 1 >= Instructions.Count) continue;
 
-                    var prevInstr = Instructions[i - 1];
-                    var curInstr = Instructions[i];
-                    var nextInstr = Instructions[i + 1];
-                    
-                    // Too lazy to strip these two into one function
-                    #region Ldsfld
-                    if (curInstr.OpCode == OpCodes.Brtrue &&
-                        nextInstr.OpCode == OpCodes.Pop &&
-                        prevInstr.OpCode == OpCodes.Ldsfld) {
-                        /*if (prevInstr.Operand.ToString().Contains("System.Boolean")) {
-                            logger.Info($"Brtrue with Boolean: {method.FullName}");
-                            prevInstr.OpCode = OpCodes.Nop;
-                            curInstr.OpCode = OpCodes.Br_S;
-                            FixedMethods++;
-                        }
-                        else*/ {
+                        var prevInstr = Instructions[i - 1];
+                        var curInstr = Instructions[i];
+                        var nextInstr = Instructions[i + 1];
+
+                        // Too lazy to strip these two into one function, mess
+                        #region Ldsfld
+                        if (curInstr.OpCode == OpCodes.Brtrue &&
+                            nextInstr.OpCode == OpCodes.Pop && 
+                            prevInstr.OpCode == OpCodes.Ldsfld) {
                             logger.Info($"Brtrue:  {method.FullName}");
                             prevInstr.OpCode = OpCodes.Nop;
                             curInstr.OpCode = OpCodes.Br_S;
                             FixedMethods++;
                         }
-                    }
-
-                    else if (curInstr.OpCode == OpCodes.Brfalse &&
-                             nextInstr.OpCode == OpCodes.Pop &&
-                             prevInstr.OpCode == OpCodes.Ldsfld) {
-                        /*if (prevInstr.Operand.ToString().Contains("System.Boolean")) {
-                            logger.Info($"Brfalse with Boolean: {method.FullName}");
-                            prevInstr.OpCode = OpCodes.Nop;
-                            curInstr.OpCode = OpCodes.Br_S;
-                            FixedMethods++;
-                        }
-                        else*/ {
+                        else if (curInstr.OpCode == OpCodes.Brfalse && 
+                            nextInstr.OpCode == OpCodes.Pop &&
+                            prevInstr.OpCode == OpCodes.Ldsfld) {
                             logger.Info($"Brfalse: {method.FullName}");
                             prevInstr.OpCode = OpCodes.Nop;
                             curInstr.OpCode = OpCodes.Br_S;
                             FixedMethods++;
                         }
-                    }
-                    #endregion
-                    #region Call
-                    if (curInstr.OpCode == OpCodes.Brtrue &&
-                        nextInstr.OpCode == OpCodes.Pop &&
-                        prevInstr.OpCode == OpCodes.Call) {
-                        if (prevInstr.Operand.ToString().Contains("System.Boolean")) {
-                            logger.Info($"Call with Boolean: {method.FullName}");
-                            prevInstr.OpCode = OpCodes.Nop;
-                            curInstr.OpCode = OpCodes.Br_S;
-                        }
-                        else {
-                            logger.Info($"Call:  {method.FullName}");
-                            prevInstr.OpCode = OpCodes.Nop;
-                            curInstr.OpCode = OpCodes.Nop;
-                        }
-                    }
+                        #endregion
 
-                    else if (curInstr.OpCode == OpCodes.Brfalse &&
-                             nextInstr.OpCode == OpCodes.Pop &&
-                             prevInstr.OpCode == OpCodes.Call) {
-                        if (prevInstr.Operand.ToString().Contains("System.Boolean")) {
-                            logger.Info($"Call with Boolean: {method.FullName}");
-                            prevInstr.OpCode = OpCodes.Nop;
-                            curInstr.OpCode = OpCodes.Nop;
+                        #region Call
+                        if (curInstr.OpCode == OpCodes.Brtrue && 
+                            nextInstr.OpCode == OpCodes.Pop &&
+                            prevInstr.OpCode == OpCodes.Call) {
+                            if (prevInstr.Operand.ToString().Contains("System.Boolean")) {
+                                logger.Info($"Call with Boolean: {method.FullName}");
+                                prevInstr.OpCode = OpCodes.Nop;
+                                curInstr.OpCode = OpCodes.Br_S;
+                            }
+                            else {
+                                logger.Info($"Call:  {method.FullName}");
+                                prevInstr.OpCode = OpCodes.Nop;
+                                curInstr.OpCode = OpCodes.Nop;
+                            }
                         }
-                        else {
-                            logger.Info($"Call: {method.FullName}");
-                            prevInstr.OpCode = OpCodes.Nop;
-                            curInstr.OpCode = OpCodes.Br_S;
+                        else if (curInstr.OpCode == OpCodes.Brfalse && 
+                            nextInstr.OpCode == OpCodes.Pop &&
+                            prevInstr.OpCode == OpCodes.Call) {
+                             if (prevInstr.Operand.ToString().Contains("System.Boolean")) {
+                                logger.Info($"Call with Boolean: {method.FullName}");
+                                prevInstr.OpCode = OpCodes.Nop;
+                                curInstr.OpCode = OpCodes.Nop;
+                             }
+                             else {
+                                logger.Info($"Call: {method.FullName}");
+                                prevInstr.OpCode = OpCodes.Nop;
+                                curInstr.OpCode = OpCodes.Br_S;
+                             }
                         }
+                        #endregion
                     }
-                    #endregion
                 }
-            }
         }
 
         private static bool ContainsSwitch(MethodDef method) => method.Body.Instructions.Any(t => t.OpCode == OpCodes.Switch);

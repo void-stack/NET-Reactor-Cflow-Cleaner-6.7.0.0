@@ -17,3 +17,23 @@ C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\DNR 6.7 Cflow\obj\Debug\net5.0\ref\DN
 C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\DNR 6.7 Cflow\obj\Debug\net5.0\DNR 6.7 Cflow.pdb
 C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\DNR 6.7 Cflow\obj\Debug\net5.0\DNR 6.7 Cflow.genruntimeconfig.cache
 C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\DNR 6.7 Cflow\bin\Debug\net5.0\de4dot.blocks.dll
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\bin\Debug\net5.0\DNR 6.7 Cflow.exe
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\bin\Debug\net5.0\DNR 6.7 Cflow.deps.json
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\bin\Debug\net5.0\DNR 6.7 Cflow.runtimeconfig.json
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\bin\Debug\net5.0\DNR 6.7 Cflow.runtimeconfig.dev.json
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\bin\Debug\net5.0\DNR 6.7 Cflow.dll
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\bin\Debug\net5.0\ref\DNR 6.7 Cflow.dll
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\bin\Debug\net5.0\DNR 6.7 Cflow.pdb
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\bin\Debug\net5.0\Colorful.Console.dll
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\bin\Debug\net5.0\de4dot.blocks.dll
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\bin\Debug\net5.0\dnlib.dll
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\obj\Debug\net5.0\DNR 6.7 Cflow.csprojAssemblyReference.cache
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\obj\Debug\net5.0\DNR 6.7 Cflow.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\obj\Debug\net5.0\DNR 6.7 Cflow.AssemblyInfoInputs.cache
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\obj\Debug\net5.0\DNR 6.7 Cflow.AssemblyInfo.cs
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\obj\Debug\net5.0\DNR 6.7 Cflow.csproj.CoreCompileInputs.cache
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\obj\Debug\net5.0\DNR 6.7 Cflow.csproj.CopyComplete
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\obj\Debug\net5.0\DNR 6.7 Cflow.dll
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\obj\Debug\net5.0\ref\DNR 6.7 Cflow.dll
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\obj\Debug\net5.0\DNR 6.7 Cflow.pdb
+C:\Users\hussa\RiderProjects\DNR 6.7 Cflow\NET-Reactor-Cflow-Cleaner-6.7.0.0\DNR 6.7 Cflow\obj\Debug\net5.0\DNR 6.7 Cflow.genruntimeconfig.cache

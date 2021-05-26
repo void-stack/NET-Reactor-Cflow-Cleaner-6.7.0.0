@@ -20,7 +20,6 @@ namespace DNR
                        Credits SychicBoy
 
         ";
-
         public static void Main(string[] args) {
             Console.Title = "DNR 6.7.0.0 Cflow Cleaner";
             Console.WriteLine(asciiArt, Color.IndianRed);

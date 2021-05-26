@@ -65,7 +65,7 @@ public static void Main(string[] args)
 
 ## Credits
 
-- GitHub - [SychicBoy](https://github.com/SychicBoyk)
+- GitHub - [SychicBoy](https://github.com/SychicBoy)
 - GitHub - [de4dot](https://github.com/de4dot)
 
 [Back To The Top](#read-me-template)

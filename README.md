@@ -17,6 +17,8 @@ Control Flow Obfuscation converts the code inside your methods into spaghetti co
 
 ---
 
+- String Decrypter for .NET Reactor 6.7.0.0: [Click me!](https://github.com/Hussaryn/NET-Reactor-String-Cleaner-6.7.0.0)
+
 ### Before
 
 ```C#
